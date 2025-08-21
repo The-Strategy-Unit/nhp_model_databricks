@@ -1,0 +1,43 @@
+# This is a Databricks asset bundle definition for my_project.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+bundle:
+  name: nhp_model
+  uuid: 486dacbd-2658-474d-84ec-1f7f7d9b6d62
+
+include:
+  - resources/*.yml
+  - resources/*/*.yml
+
+artifacts:
+  nhp_data:
+    type: whl
+    build: uv build
+    path: .
+
+targets:
+  dev:
+    # The default target uses 'mode: development' to create a development copy.
+    # - Deployed resources get prefixed with '[dev my_user_name]'
+    # - Any job schedules and triggers are paused by default.
+    # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-4243551358552236.16.azuredatabricks.net
+
+    presets:
+      # Set dynamic_version: true on all artifacts of type "whl".
+      # This makes "bundle deploy" add a timestamp to wheel's version before uploading,
+      # new wheel takes over the previous installation even if actual wheel version is unchanged.
+      # See https://docs.databricks.com/aws/en/dev-tools/bundles/settings
+      artifacts_dynamic_version: true
+
+  prod:
+    mode: production
+    workspace:
+      host: https://adb-4243551358552236.16.azuredatabricks.net
+      # We explicitly deploy to /Workspace/Users/thomas.jemmett@mlcsu.nhs.uk to make sure we only have a single copy.
+      root_path: /Workspace/Jobs/nhp_devs/${bundle.name}/${bundle.target}
+    permissions:
+      - user_name: thomas.jemmett@mlcsu.nhs.uk
+        level: CAN_MANAGE
