@@ -42,6 +42,8 @@ class DatabricksICB(Data):
             self._spark.read.parquet(f"{self._data_path}/ip")
             .filter(F.col("icb") == self._icb)
             .filter(F.col("fyear") == self._year)
+            .withColumn("sitetret", F.col("dataset"))
+            .withColumn("dataset", F.lit(self._icb))
             .persist()
         )
 
@@ -73,13 +75,23 @@ class DatabricksICB(Data):
         :return: the outpatients dataframe
         :rtype: pd.DataFrame
         """
-        return (
+        op_df = (
             self._spark.read.parquet(f"{self._data_path}/op")
             .filter(F.col("icb") == self._icb)
             .filter(F.col("fyear") == self._year)
-            .withColumnRenamed("index", "rn")
+            .withColumn("sitetret", F.col("dataset"))
+            .withColumn("dataset", F.lit(self._icb))
+            .drop("index")
             .toPandas()
         )
+
+        op_df = op_df.groupby(
+            list(set(op_df.columns) - {"attendances", "tele_attendances"}), as_index=False
+        )[["attendances", "tele_attendances"]].sum()
+
+        op_df["rn"] = op_df.index
+
+        return op_df
 
     def get_aae(self) -> pd.DataFrame:
         """Get the A&E dataframe.
@@ -87,13 +99,23 @@ class DatabricksICB(Data):
         :return: the A&E dataframe
         :rtype: pd.DataFrame
         """
-        return (
+        aae_df = (
             self._spark.read.parquet(f"{self._data_path}/aae")
             .filter(F.col("icb") == self._icb)
             .filter(F.col("fyear") == self._year)
-            .withColumnRenamed("index", "rn")
+            .withColumn("sitetret", F.col("dataset"))
+            .withColumn("dataset", F.lit(self._icb))
+            .drop("index")
             .toPandas()
         )
+
+        aae_df = aae_df.groupby(list(set(aae_df.columns) - {"arrivals"}), as_index=False)[
+            ["arrivals"]
+        ].sum()
+
+        aae_df["rn"] = aae_df.index
+
+        return aae_df
 
     def get_birth_factors(self) -> pd.DataFrame:
         """Get the birth factors dataframe.
@@ -112,8 +134,10 @@ class DatabricksICB(Data):
         )
         # join and aggregate
         return (
-            births_df.join(catchments_df, "area_code")
-            .groupBy("age", "sex", "projection")
+            births_df.join(catchments_df, "area_code")  # noqa: PD010
+            .withColumn("sex", F.lit(2))
+            .groupBy("age", "sex", F.col("projection").alias("variant"))
+            .pivot("year")
             .agg(F.sum(F.col("value") * F.col("pcnt")).alias("value"))
             .toPandas()
         )
@@ -135,8 +159,9 @@ class DatabricksICB(Data):
         )
         # join and aggregate
         return (
-            demographics_df.join(catchments_df, "area_code")
-            .groupBy("age", "sex", "projection")
+            demographics_df.join(catchments_df, "area_code")  # noqa: PD010
+            .groupBy("age", "sex", F.col("projection").alias("variant"))
+            .pivot("year")
             .agg(F.sum(F.col("value") * F.col("pcnt")).alias("value"))
             .toPandas()
         )
