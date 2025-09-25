@@ -61,7 +61,6 @@ class DatabricksICB(Data):
         """
         return {
             k: self._spark.read.parquet(f"{self._data_path}/ip_{k}_strategies")
-            .filter(F.col("icb") == self._icb)
             .filter(F.col("fyear") == self._year)
             .join(self._apc, "rn", "semi")
             .toPandas()
