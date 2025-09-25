@@ -1,0 +1,52 @@
+resources:
+  jobs:
+    NHP_Model-v4_1_0-Run_ICB:
+      name: NHP Model v4.1.0 Run (ICB)
+      tasks:
+        - task_key: list_files
+          notebook_task:
+            notebook_path: ../notebooks/list_files_in_queue.ipynb
+          job_cluster_key: run_icb_model
+        - task_key: run_model
+          depends_on:
+            - task_key: list_files
+          for_each_task:
+            inputs: "{{tasks.list_files.values.file_list}}"
+            task:
+              task_key: run_model_iteration
+              notebook_task:
+                notebook_path: ../notebooks/nhp_model_run-icb.ipynb
+                base_parameters:
+                  params_path: "{{input}}"
+              job_cluster_key: run_icb_model
+              libraries:
+                - whl: ../dist/*.whl
+      job_clusters:
+        - job_cluster_key: run_icb_model
+          new_cluster:
+            spark_version: 17.1.x-scala2.13
+            spark_conf:
+              spark.master: local[*, 4]
+              spark.databricks.cluster.profile: singleNode
+            azure_attributes:
+              first_on_demand: 1
+              availability: ON_DEMAND_AZURE
+              spot_bid_max_price: -1
+            node_type_id: Standard_E8ads_v5
+            driver_node_type_id: Standard_E8ads_v5
+            custom_tags:
+              ResourceClass: SingleNode
+              project: nhp
+            spark_env_vars:
+              PYSPARK_PYTHON: /databricks/python3/bin/python3
+            enable_elastic_disk: true
+            data_security_mode: SINGLE_USER
+            runtime_engine: STANDARD
+            num_workers: 0
+      parameters:
+        - name: queue_path
+          default: "/Volumes/nhp/model_data/queue/icb/"
+        - name: data_path
+          default: "/Volumes/nhp/model_data/files/v4.1.0/"
+        - name: save_full_model_results
+          default: "false"
