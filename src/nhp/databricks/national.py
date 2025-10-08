@@ -55,9 +55,7 @@ class DatabricksNational(Data):
         :return: a function to initialise the object
         :rtype: Callable[[str, str], Databricks]
         """
-        return lambda fyear, _: DatabricksNational(
-            spark, data_path, fyear, sample_rate, seed
-        )
+        return lambda fyear, _: DatabricksNational(spark, data_path, fyear, sample_rate, seed)
 
     def get_ip(self) -> pd.DataFrame:
         """Get the inpatients dataframe.
@@ -98,14 +96,10 @@ class DatabricksNational(Data):
             # TODO: temporary fix, see #353
             .withColumn("sushrg_trimmed", F.lit("HRG"))
             .withColumn("imd_quintile", F.lit(0))
-            .groupBy(
-                op.drop("index", "fyear", "attendances", "tele_attendances").columns
-            )
+            .groupBy(op.drop("index", "fyear", "attendances", "tele_attendances").columns)
             .agg(
                 (F.sum("attendances") * self._sample_rate).alias("attendances"),
-                (F.sum("tele_attendances") * self._sample_rate).alias(
-                    "tele_attendances"
-                ),
+                (F.sum("tele_attendances") * self._sample_rate).alias("tele_attendances"),
             )
             # TODO: how do we make this stable? at the moment we can't use full model results with
             # national
@@ -209,4 +203,15 @@ class DatabricksNational(Data):
         """Get the health status adjustment gams."""
         # this is not supported in our data bricks environment currently
         raise NotImplementedError
-        raise NotImplementedError
+
+    def get_inequalities(self) -> pd.DataFrame:
+        """Get the inequalities dataframe.
+
+        Returns:
+            The inequalities dataframe.
+        """
+        return (
+            self._spark.read.parquet(f"{self._data_path}/inequalities")
+            .filter(F.col("fyear") == self._year)
+            .toPandas()
+        )

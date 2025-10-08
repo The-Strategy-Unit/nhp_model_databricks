@@ -185,3 +185,16 @@ class DatabricksICB(Data):
         """Get the health status adjustment gams."""
         # this is not supported in our data bricks environment currently
         raise NotImplementedError
+
+    def get_inequalities(self) -> pd.DataFrame:
+        """Get the inequalities dataframe.
+
+        Returns:
+            The inequalities dataframe.
+        """
+        return (
+            self._spark.read.parquet(f"{self._data_path}/inequalities")
+            .filter(F.col("icb") == self._icb)
+            .filter(F.col("fyear") == self._year)
+            .toPandas()
+        )
