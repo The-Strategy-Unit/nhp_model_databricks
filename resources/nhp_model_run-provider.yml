@@ -47,6 +47,6 @@ resources:
         - name: queue_path
           default: "/Volumes/nhp/model_data/queue/provider/"
         - name: data_path
-          default: "/Volumes/nhp/model_data/files/4.2.1/"
+          default: "/Volumes/nhp/model_data/files/v.4.2.1/"
         - name: save_full_model_results
           default: "false"
