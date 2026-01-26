@@ -338,6 +338,70 @@ wheels = [
 ]
 
 [[package]]
+name = "janitor-rs"
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f9/e9/e8f54d901cb28b6f5307b9afc805f895918f7db14805ba76755b0b1e0794/janitor_rs-0.3.0.tar.gz", hash = "sha256:02bac0dfc7edb6105c60c4e5f9c3bd2d879ed26db7bd17462eb11af05ec871fc", size = 18145, upload-time = "2025-12-23T11:59:59.688Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/39/0c/d64f530661786d76fa540664d64033f4be6005b4dea3c145b68ade91dd56/janitor_rs-0.3.0-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:50dc66d75c7c6e65589a0b8936e625d44579f2c850ee90fca86fbe02b1494646", size = 475273, upload-time = "2025-12-23T11:59:07.386Z" },
+    { url = "https://files.pythonhosted.org/packages/83/f5/bac02a212635611488ff5cb088b4afcd3e44b0d1b779c1350fb5d05070f2/janitor_rs-0.3.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:8fc98f5f442cf6c2a278c9677a1a25f8b2db9fcdd612102c875ad3ef93fd6d91", size = 442029, upload-time = "2025-12-23T11:59:02.76Z" },
+    { url = "https://files.pythonhosted.org/packages/0f/9d/9b1b823a29d33954617baf6621218bcd5619a93f68cea5b4ac5cefc3eb38/janitor_rs-0.3.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c2fd5129218e7f461aac08b3fd7d6c8f4ce73286a0074ef84199382113217c6e", size = 476614, upload-time = "2025-12-23T11:57:55.597Z" },
+    { url = "https://files.pythonhosted.org/packages/81/10/3788b6e82eba7f3aec6e6794f11d8429cdcd8d7d52594850245f7036a60f/janitor_rs-0.3.0-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:a1216427431f4b5b64490851838ca9fc5a9eebe242cee4ba58e5b41334eb0133", size = 538851, upload-time = "2025-12-23T11:58:08.388Z" },
+    { url = "https://files.pythonhosted.org/packages/fd/83/1e6e31a5f7bc59dd142be392549eb8f93a54c726ec87b1299d77dd81851a/janitor_rs-0.3.0-cp312-cp312-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:30b1f0fecce6432d8e3d47dd8ad4335939617ef6edc63f6f84b4ec344c7e45cc", size = 556705, upload-time = "2025-12-23T11:58:44.193Z" },
+    { url = "https://files.pythonhosted.org/packages/18/e8/3f0ddb0bdbdef7bc40c61ed26d028166f1093c0636e43ae3e53277d96cb1/janitor_rs-0.3.0-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:3a60916cd9fff7c4be0e7de337f03650c5d1b5f5eecae49e5b9ed8d1ec056c9b", size = 631483, upload-time = "2025-12-23T11:58:19.517Z" },
+    { url = "https://files.pythonhosted.org/packages/65/e0/cab930125a173f2a6e436726d596384802098b43d9d5494bccc214691eec/janitor_rs-0.3.0-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:a304ce802583aee141529bb79c78e884d6b84720d50adb1aae513a698010c108", size = 540986, upload-time = "2025-12-23T11:58:32.341Z" },
+    { url = "https://files.pythonhosted.org/packages/d0/ee/f66b24df315c3959e1cb3e749c32463c8d8a9a0f6703667ceabea7e10f13/janitor_rs-0.3.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c2500e72f7991d11bcff36e6cd0e7bfe616d6e649f31d4f90fd0aad68ebea36a", size = 517006, upload-time = "2025-12-23T11:58:53.724Z" },
+    { url = "https://files.pythonhosted.org/packages/c8/bd/32f03744ee602a3aecb5f73dc5ec1969549d256d7564a43fb3bacaebfb32/janitor_rs-0.3.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:2b621f684c87ccdb9d552f69fcf2bd91b69877e1c42df0c2c065506b9fb02a3e", size = 658905, upload-time = "2025-12-23T11:59:13.275Z" },
+    { url = "https://files.pythonhosted.org/packages/f2/5c/03cd86730ccfb74f8ba10014e14b9d515a34a4f19ef2381cbc04f8a8b280/janitor_rs-0.3.0-cp312-cp312-musllinux_1_2_armv7l.whl", hash = "sha256:a656f4b66f39570906704507aad38232e0906a4a846f05127a5eb06cfb873cbc", size = 808102, upload-time = "2025-12-23T11:59:24.4Z" },
+    { url = "https://files.pythonhosted.org/packages/a8/78/6e8cd020debae95a418804e670b1924847e34e12c1ccbaab8ca836033503/janitor_rs-0.3.0-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:91429c46fb60ecbd3093a3c98890f5ffb8630b35506e719fd3741fb1a0af1b89", size = 763338, upload-time = "2025-12-23T11:59:37.165Z" },
+    { url = "https://files.pythonhosted.org/packages/0b/4e/6abb3c5cc7c663a2f21c83941086b35a43c1e3aebc6c3107a63ddf2c1e62/janitor_rs-0.3.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:ec940bdb56dada6ca41c804c46f039fa95ee66e375f26473f6fb057b4856392b", size = 719502, upload-time = "2025-12-23T11:59:49.939Z" },
+    { url = "https://files.pythonhosted.org/packages/ab/0b/cc14ecaf2af29f2bbb03d794f6ff0fa50306231379736d1ffa45253715f1/janitor_rs-0.3.0-cp312-cp312-win_amd64.whl", hash = "sha256:e3bc329fbc04f05bb8c7e66cd488c03b3a2647b38c03759e25ce14b53d845697", size = 444170, upload-time = "2025-12-23T12:00:02.974Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/35/b6f8059f6e6225192dd2ba76df6166569c0ee0cadf48bd6baa1d9fb914b6/janitor_rs-0.3.0-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:aed29c245e0e435ffbb7c31b665ef897d0af1a319c5d8c1561097f8dca3774d4", size = 474986, upload-time = "2025-12-23T11:59:08.498Z" },
+    { url = "https://files.pythonhosted.org/packages/2f/58/7e17b99d239d685f25fd36c43c99797070b5a79d65681caa0057ceaa7f8d/janitor_rs-0.3.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:577a6382330cf506aa0efd90423eb87c523f9df1e0cf678d0afc9afe7e00d015", size = 442017, upload-time = "2025-12-23T11:59:03.865Z" },
+    { url = "https://files.pythonhosted.org/packages/82/f1/a4bb4c69366192c0d1b992665d63355bbcf6fedd56472827fc5f95d7272c/janitor_rs-0.3.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a7a49113cf9a2119e880fcf7805dafd9680b7eef91d5ab2737602c4cb0ec5018", size = 476060, upload-time = "2025-12-23T11:57:57.14Z" },
+    { url = "https://files.pythonhosted.org/packages/60/0b/b8627bd356e0e2b465c54d44ecc4578ddd4ad6b4df7a5c9aa87c6e99c1ec/janitor_rs-0.3.0-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:cee44a698955ccfbb321ebe2ab2eeeab312845427de5e33174410a0dbf9b93c2", size = 538553, upload-time = "2025-12-23T11:58:09.372Z" },
+    { url = "https://files.pythonhosted.org/packages/f7/27/4f45e7c6497c90981da0f20b92c6d31046219a26c83e93a28ddb9ca17f0b/janitor_rs-0.3.0-cp313-cp313-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:d8cd6d750809f38aa83c0507fb86d10a217bdb0db898ffcf6f3b743302c3e412", size = 556402, upload-time = "2025-12-23T11:58:45.587Z" },
+    { url = "https://files.pythonhosted.org/packages/c0/f4/19903aeff4a0b54139450729a3ce5a14e4f30c911bbb06196725eafe67eb/janitor_rs-0.3.0-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:8e38d5a42918302a32e5207cbff8039bcbbf460dfdc7af1ff1a69bbdf33d5f72", size = 631658, upload-time = "2025-12-23T11:58:20.774Z" },
+    { url = "https://files.pythonhosted.org/packages/06/c3/a44dcc35bfa2294121a59bcd4a094f0fd59cf289aa4b4d19df7b8409f544/janitor_rs-0.3.0-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:ac812b879615f89d0b22a19ab5808d8f516f6ebf554f11c0c5033079a48a9560", size = 540149, upload-time = "2025-12-23T11:58:33.333Z" },
+    { url = "https://files.pythonhosted.org/packages/54/42/694eaea8d0ce3da3b1dbf0aa57a25a63f8eb50d604ea439e998628d7578e/janitor_rs-0.3.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:81a0cd124721bb06bebf7b5821ca2ef2c1e8d0207bc9f1c2f02ac37d855efab4", size = 516583, upload-time = "2025-12-23T11:58:54.782Z" },
+    { url = "https://files.pythonhosted.org/packages/00/85/75fef7491c3097ddcba198e5df447b377c7156d44aca5c694f206bf74b45/janitor_rs-0.3.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:0c6a9435ff54a6a2fb1951b016ff0d2ea50ad4fdf46873b5661e66c6063cf9bf", size = 658626, upload-time = "2025-12-23T11:59:14.354Z" },
+    { url = "https://files.pythonhosted.org/packages/68/cf/c25f095496d0f0ce59588325f34549099661f361f091efac2bbf69cfa17e/janitor_rs-0.3.0-cp313-cp313-musllinux_1_2_armv7l.whl", hash = "sha256:0699f7b67a9b6c2cb2f9ebba8a8dd116b44fb9eb4d070f0bae7d853795b62191", size = 807883, upload-time = "2025-12-23T11:59:25.808Z" },
+    { url = "https://files.pythonhosted.org/packages/8a/18/fe92f2c7e67b835182eafa6578ec4cc8a6e60798b51d030dedeaef3b6c74/janitor_rs-0.3.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:eb801b48536e4cbff580385ef4401b8256b876041b4ef0d42a59faf266f27c98", size = 763125, upload-time = "2025-12-23T11:59:38.272Z" },
+    { url = "https://files.pythonhosted.org/packages/95/f8/44b8dd2c21812e8434ffac5bae338feaa72115b3f777bfe6122ff18cacba/janitor_rs-0.3.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:adba8f7f28ebc80ee1aeedc324f8d1626e41c81c8d02275fd28d1184e6db9c91", size = 719065, upload-time = "2025-12-23T11:59:51.116Z" },
+    { url = "https://files.pythonhosted.org/packages/08/81/5e3522f03724911a7bbd2c1a828629e0dfab4eb8668e9f471e78046fe075/janitor_rs-0.3.0-cp313-cp313-win_amd64.whl", hash = "sha256:4448186b6a9b8b7f39732680936091b474913e8db20efae514f947f6330ce346", size = 443979, upload-time = "2025-12-23T12:00:04.085Z" },
+    { url = "https://files.pythonhosted.org/packages/47/3e/f4c511906b67490cc13a8d6190b4b9bfb04d9d9f08c54bffefd4ad2ad541/janitor_rs-0.3.0-cp313-cp313t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f67dff75c9b1168c693610dcd4697cdb16ab77b273ace6d65a97f608cde8e4b6", size = 472106, upload-time = "2025-12-23T11:57:58.272Z" },
+    { url = "https://files.pythonhosted.org/packages/9c/75/20edc8d3d0e3d2443f06e45d1ff7ceb1840db3005712ff6a65a90d4f0196/janitor_rs-0.3.0-cp313-cp313t-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:85826f8a43913498a4127041a15c13a619a9d978eb317d2e0a0c446f842c2e23", size = 533698, upload-time = "2025-12-23T11:58:10.432Z" },
+    { url = "https://files.pythonhosted.org/packages/f4/87/38cdf46a3850e52437b81b964876a3253808edd9d9070ef3e77b1a46102c/janitor_rs-0.3.0-cp313-cp313t-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:c8dac46450659d9218093289cf810af5f75514ca3c2e257f6bef6d7e552983be", size = 637438, upload-time = "2025-12-23T11:58:22.032Z" },
+    { url = "https://files.pythonhosted.org/packages/00/fc/baa894970d9a6a3f5250b7adb07507f9d7b8638d246403835432cf295dcf/janitor_rs-0.3.0-cp313-cp313t-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:e6f24bb50d051d1b26bb8428184a69b2d35c68ddb436ca8baf18a6f7d3b15a76", size = 554779, upload-time = "2025-12-23T11:58:34.37Z" },
+    { url = "https://files.pythonhosted.org/packages/73/c6/274c023d41d233ab3ccabb35884311350d76c3eff8948758d59398036e69/janitor_rs-0.3.0-cp313-cp313t-musllinux_1_2_aarch64.whl", hash = "sha256:bb80e4ac8c24591889ee9380a9e35368ca0043c107fd4ae92b4a3aca506ec9b0", size = 654541, upload-time = "2025-12-23T11:59:15.436Z" },
+    { url = "https://files.pythonhosted.org/packages/0f/56/9cb01ced922dcd2cd6bd18cb355aa2dc2f56988b7dcf15a2c2761cfd55bc/janitor_rs-0.3.0-cp313-cp313t-musllinux_1_2_armv7l.whl", hash = "sha256:5f2628e2dd980e6147e8e9c4a60d1d310f917f948daecdef1f9b6bde8b1a9c63", size = 804252, upload-time = "2025-12-23T11:59:27.046Z" },
+    { url = "https://files.pythonhosted.org/packages/94/92/19cb70c9d92be48cb23fd85aa67d814201f95ce8c43ae046f666150b2f15/janitor_rs-0.3.0-cp313-cp313t-musllinux_1_2_i686.whl", hash = "sha256:573b96a8c27d8c57d2c89d843b6f4e6b7ae1c1e49e89d1285d3f6f93982eab12", size = 754408, upload-time = "2025-12-23T11:59:39.31Z" },
+    { url = "https://files.pythonhosted.org/packages/41/52/abe74a2af20793b28b0961e8ed4939a3eb04651d04eb2e17bc6fed2457ab/janitor_rs-0.3.0-cp313-cp313t-musllinux_1_2_x86_64.whl", hash = "sha256:2e7e624895a2242a652a9a53c31e8911b3e44b20aca4c140c0c907952e4a3ada", size = 712407, upload-time = "2025-12-23T11:59:52.259Z" },
+    { url = "https://files.pythonhosted.org/packages/91/e0/7264c95f9e8242da34b15a57dc05b74ed98628d1de88ca36f50ec32c3fe0/janitor_rs-0.3.0-cp314-cp314-macosx_10_12_x86_64.whl", hash = "sha256:59def521101804c3e589472637af86f125f80716a06e95aae68369262897f8d2", size = 483230, upload-time = "2025-12-23T11:59:09.515Z" },
+    { url = "https://files.pythonhosted.org/packages/6d/16/ab06ea680df9be6258dc29790caec708e14c18f957ffaca275da3c66eebc/janitor_rs-0.3.0-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:dd623076501e34b4730bc2c5ee277632a837b09b901010316c8809ee5920e105", size = 441713, upload-time = "2025-12-23T11:59:04.9Z" },
+    { url = "https://files.pythonhosted.org/packages/ae/0a/c619d4a592fb140baf5a1d01a1f8e3e0c5ca2b7afa0fcc6b168e444584bf/janitor_rs-0.3.0-cp314-cp314-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:619336cc647d203470cdeb55992d2406a4fc8594a61d8233aec9ce2ce7b4741d", size = 483628, upload-time = "2025-12-23T11:57:59.85Z" },
+    { url = "https://files.pythonhosted.org/packages/15/6b/c89b6e659187ce19a95565361cc2d4e8c6de1743f7391843739e25c52cc2/janitor_rs-0.3.0-cp314-cp314-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:4e43a628896a6fb4742633f02f9328fbffe68268771f312e88779a4230e9267f", size = 539492, upload-time = "2025-12-23T11:58:11.691Z" },
+    { url = "https://files.pythonhosted.org/packages/b7/6f/c16769d143ed08bee923d88ea4a2fb1fda5c989ddd1bda258a8d24a5099b/janitor_rs-0.3.0-cp314-cp314-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:d4a531c859fac5b78a9d5789255cbed78989dc60d21b319278ec725cd7ab88e1", size = 556466, upload-time = "2025-12-23T11:58:46.566Z" },
+    { url = "https://files.pythonhosted.org/packages/61/24/6803d5d2cea10989f273c58df1ed4d65f902bb9a52d2a452aeada47c7b5d/janitor_rs-0.3.0-cp314-cp314-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:b82fb9bcf1f76419f18e86281f4a4a61f48a2e7aaa33d2b305bfcae91983a407", size = 635834, upload-time = "2025-12-23T11:58:23.032Z" },
+    { url = "https://files.pythonhosted.org/packages/97/25/c07730b1912ad7239baf30ed79abaceeb4266a4d17d515ba4e9ec1c9e36c/janitor_rs-0.3.0-cp314-cp314-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:2ed5609d0097a37d3f4d797d52b053e200cd615936ef91131044a876ce63c7e1", size = 564789, upload-time = "2025-12-23T11:58:35.474Z" },
+    { url = "https://files.pythonhosted.org/packages/3a/4d/d96327ba0465217093b75c6fe07f7e85729ee4f1456c7ccb5de84c17520e/janitor_rs-0.3.0-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e090717ece04e9d1b342fdcaaca2465e3e5885d17bd00eecfc3a5c372d774521", size = 523161, upload-time = "2025-12-23T11:58:55.812Z" },
+    { url = "https://files.pythonhosted.org/packages/e7/ce/72bba96fc00b6040469ea322e9360ac4bf08e8ed467f16aacdd5117b8bd8/janitor_rs-0.3.0-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:a228be77a06445c77cf28ff5f69c546972fc3a1d55d95a03b44d45ca021497b8", size = 666282, upload-time = "2025-12-23T11:59:16.507Z" },
+    { url = "https://files.pythonhosted.org/packages/19/46/99b7124acec5b933a3d1b10e8c731b2223c3df2126c1c978737b48082d20/janitor_rs-0.3.0-cp314-cp314-musllinux_1_2_armv7l.whl", hash = "sha256:52fe24d88865b566ad0defa0f01b33d1641ddeefdf89dcb740a9dedf63d217b0", size = 808325, upload-time = "2025-12-23T11:59:28.183Z" },
+    { url = "https://files.pythonhosted.org/packages/d4/6c/e246aa54e2a0e9c3ad418a2ee4738b9da9c18ce4be6c8641dc1a0502307c/janitor_rs-0.3.0-cp314-cp314-musllinux_1_2_i686.whl", hash = "sha256:5b3a2b6d025ff0243beb7d09f50c56563b65d6f379244981ca0c05a5598fd0b9", size = 763212, upload-time = "2025-12-23T11:59:40.431Z" },
+    { url = "https://files.pythonhosted.org/packages/53/3e/513967af1b3cd1b50120b5defcbcfbac04ae14e4f2c36f61eca853ac766b/janitor_rs-0.3.0-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:8b64f36c4fe23ad2da738e6f78b1cd049d7fa9749f247e08871c0b38954553f7", size = 729160, upload-time = "2025-12-23T11:59:53.626Z" },
+    { url = "https://files.pythonhosted.org/packages/2f/f1/10a24c194c489ebe2285429f2b0591a05167d241ba87c81af329154ddd8f/janitor_rs-0.3.0-cp314-cp314-win32.whl", hash = "sha256:e047e4b4a46c86699aa78a41aba001e59d575e582dd5f80015a3fee4c319ecbe", size = 375015, upload-time = "2025-12-23T12:00:07.6Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/db/8b1dd2716d189bb43a4859fa12f2817d2b9cc55d516cc737a597a627e878/janitor_rs-0.3.0-cp314-cp314-win_amd64.whl", hash = "sha256:ca09db68ed18a6f1cbc8f5889d0ca3cba033bf46dab08354adda4b3729ab4986", size = 452722, upload-time = "2025-12-23T12:00:05.45Z" },
+    { url = "https://files.pythonhosted.org/packages/31/a4/1f7a5ed1159b3f37424aa36ecb18115b701110d16e8788803d61ec3aac7f/janitor_rs-0.3.0-cp314-cp314t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:336114c39c2beb7bca8d8194859b5a5de244d06a507bc3ca50dc6c587b488f60", size = 472775, upload-time = "2025-12-23T11:58:01.187Z" },
+    { url = "https://files.pythonhosted.org/packages/80/ef/3f8f8c67919ee323b96583c3b20692633d607391723dc76e8ebebe30dee3/janitor_rs-0.3.0-cp314-cp314t-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:a3fd2f21ca80efa706b0481c338aeba35d6b6bf20ea22c7eed74dcb913f61371", size = 534776, upload-time = "2025-12-23T11:58:12.938Z" },
+    { url = "https://files.pythonhosted.org/packages/17/39/63d22d567faee226d7e49c93558fc56d122bdb534b8539e6aa37e464d790/janitor_rs-0.3.0-cp314-cp314t-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:e77d5fb00bb5e70dae40a3c25e6cb7ebf83e3abdc9e0ae8afa70d6d0efe34b60", size = 636966, upload-time = "2025-12-23T11:58:24.11Z" },
+    { url = "https://files.pythonhosted.org/packages/b3/38/6bf99c458670405771ac73093916bfd7b70f637beded20dc6a23463d99dd/janitor_rs-0.3.0-cp314-cp314t-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:1124e5dcea8ce04f8a244acf2e85b8127fb99a0d27f6c9dde77be4d538a1caa9", size = 555442, upload-time = "2025-12-23T11:58:36.476Z" },
+    { url = "https://files.pythonhosted.org/packages/1b/fa/86208137708bfaefc802f335b2047820c2762cfb82189116ace0b7a4e2ae/janitor_rs-0.3.0-cp314-cp314t-musllinux_1_2_aarch64.whl", hash = "sha256:20ad01245ffcb6933217779de674eae94bfa98a371f7c362493727d99a48b989", size = 655094, upload-time = "2025-12-23T11:59:17.566Z" },
+    { url = "https://files.pythonhosted.org/packages/4e/d4/2b6a78e20121ba8b6cd803765d43739d5734251d73902626fc9d014554c7/janitor_rs-0.3.0-cp314-cp314t-musllinux_1_2_armv7l.whl", hash = "sha256:66a076d503663d76a484c59a5b82b2eee6949e38aa02e29ab9ec8ddc5271cd19", size = 805069, upload-time = "2025-12-23T11:59:29.44Z" },
+    { url = "https://files.pythonhosted.org/packages/d2/34/67ea6b7b730defb1281737844c4be43c04a6b8260285ed16547fa52e2e95/janitor_rs-0.3.0-cp314-cp314t-musllinux_1_2_i686.whl", hash = "sha256:c83e81f018968c0393c6004362f56f25b69bd2c4bbba7cbd35518d2deb5cf851", size = 754695, upload-time = "2025-12-23T11:59:42.195Z" },
+    { url = "https://files.pythonhosted.org/packages/9a/a5/3e7590ffe299f511797ab67a297d13f37b9237cad9184fec5383ea0ee108/janitor_rs-0.3.0-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:034ff6f827272c15d15d213ea6b26513b4b9c639eb02e2cb0066780d0c12727c", size = 712697, upload-time = "2025-12-23T11:59:55.2Z" },
+]
+
+[[package]]
 name = "jsonschema"
 version = "4.25.1"
 source = { registry = "https://pypi.org/simple" }
@@ -410,8 +474,8 @@ wheels = [
 
 [[package]]
 name = "nhp-model"
-version = "4.3.0"
-source = { git = "https://github.com/the-strategy-unit/nhp_model.git?rev=v4.3.0#b383154db27a4030d037087df37c85a53a1faa15" }
+version = "4.3.1.dev5+g91b60a4e7"
+source = { git = "https://github.com/the-strategy-unit/nhp_model.git?rev=v4.3.1#91b60a4e77f6bd51cf7f92430b093f4b5f538f4c" }
 dependencies = [
     { name = "azure-identity" },
     { name = "azure-storage-blob" },
@@ -420,7 +484,6 @@ dependencies = [
     { name = "jsonschema" },
     { name = "numpy" },
     { name = "pandas" },
-    { name = "pandas-flavor" },
     { name = "pandas-stubs" },
     { name = "pyarrow" },
     { name = "pyjanitor" },
@@ -442,7 +505,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "databricks-connect", specifier = ">=16.1.6" },
-    { name = "nhp-model", git = "https://github.com/the-strategy-unit/nhp_model.git?rev=v4.3.0" },
+    { name = "nhp-model", git = "https://github.com/the-strategy-unit/nhp_model.git?rev=v4.3.1" },
     { name = "pandas", specifier = ">=2.3.2" },
     { name = "pyspark", specifier = ">=3.5.6" },
 ]
@@ -555,15 +618,15 @@ wheels = [
 
 [[package]]
 name = "pandas-flavor"
-version = "0.7.0"
+version = "0.8.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pandas" },
     { name = "xarray" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/f4/f3/be418c6244854bf66e3ec08c996a4b2b666536f2d09c1b9f2de8dd0eff73/pandas_flavor-0.7.0.tar.gz", hash = "sha256:617bf9f96902017afc9bd284f611592bce91806d3c7ae34ad64f6edab3edaf7e", size = 11057, upload-time = "2025-04-11T04:00:12.388Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/86/60/901bacfcc4e67499e37198ad199fb7c113b06814148f7f4822816467a925/pandas_flavor-0.8.1.tar.gz", hash = "sha256:255fa5851833ee0132c4fdd6c1565ec1e938a8c2671c37e408006da6b2bdc366", size = 98266, upload-time = "2025-11-22T11:03:11.209Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5d/e6/71ed4d95676098159b533c4a4c424cf453fec9614edaff1a0633fe228eef/pandas_flavor-0.7.0-py3-none-any.whl", hash = "sha256:7ee81e834b111e424679776f49c51abcffec88203b3ff0df2c9cb75550e06b1a", size = 8375, upload-time = "2025-04-11T04:00:11.182Z" },
+    { url = "https://files.pythonhosted.org/packages/30/04/b57109ac39c90054ca8239daa61f619042b73406309c33df06d3b73a48a7/pandas_flavor-0.8.1-py3-none-any.whl", hash = "sha256:6a74c48a7014e27117a164b687c23ca9f7da46c5b198a516ab4ebaa22435292b", size = 8528, upload-time = "2025-11-22T11:03:10.368Z" },
 ]
 
 [[package]]
@@ -663,17 +726,18 @@ wheels = [
 
 [[package]]
 name = "pyjanitor"
-version = "0.31.0"
+version = "0.32.9"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
+    { name = "janitor-rs" },
     { name = "multipledispatch" },
     { name = "natsort" },
     { name = "pandas-flavor" },
     { name = "scipy" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/00/f1/37304e2eab81d532ca8931595cd5acb55be5d44b246123acb995d42ba102/pyjanitor-0.31.0.tar.gz", hash = "sha256:50307d1117e6cd812953e2200a72db4bd91ec1fd3d8c5b99a16d5a6db2311a27", size = 215005, upload-time = "2025-03-07T00:16:24.993Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/04/4a/d85f6f4a618bf2a323760e587a3e341ca33f6b8186f26b6a0133670e8c4b/pyjanitor-0.32.9.tar.gz", hash = "sha256:305f92221e961a21bab51f56858184b7dc5241fe6c20edb41e99b76c4218598d", size = 240142, upload-time = "2026-01-22T13:52:22.356Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/38/b5/0f79360a302b14a76ec5649403325fbe66580514b7a8f94d34aa6598c04c/pyjanitor-0.31.0-py3-none-any.whl", hash = "sha256:c8c5888e6b4d30854c9d302348ff6816091c749c7d2ee160c96064dfff611850", size = 215419, upload-time = "2025-03-07T00:16:23.113Z" },
+    { url = "https://files.pythonhosted.org/packages/50/a6/24111c3503a6c937f1bfde5d0c3fd98b992a00e019df79b6ada07cec7147/pyjanitor-0.32.9-py3-none-any.whl", hash = "sha256:8adcd87d38f268c9e9007b96d9ef7c50870a5bcbe1fb5961b59d0b53852a5969", size = 237496, upload-time = "2026-01-22T13:52:20.558Z" },
 ]
 
 [[package]]
