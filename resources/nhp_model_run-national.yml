@@ -1,7 +1,7 @@
 resources:
   jobs:
     NHP_Model-v4_3-Run_National:
-      name: NHP Model v4.3.1 Run (National)
+      name: NHP Model v4.4.0 Run (National)
       tasks:
         - task_key: list_files
           notebook_task:
@@ -47,6 +47,6 @@ resources:
         - name: queue_path
           default: "/Volumes/nhp/model_data/queue/national/"
         - name: data_path
-          default: "/Volumes/nhp/model_data/files/v4.3.0/"
+          default: "/Volumes/nhp/model_data/files/v4.4.0/"
         - name: save_full_model_results
           default: "false"

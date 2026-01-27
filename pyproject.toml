@@ -7,7 +7,7 @@ requires-python = ">=3.12"
 
 dependencies = [
     "databricks-connect>=16.1.6",
-    "nhp-model@git+https://github.com/the-strategy-unit/nhp_model.git@v4.3.1",
+    "nhp-model@git+https://github.com/the-strategy-unit/nhp_model.git@v4.4.0",
     "pandas>=2.3.2",
     "pyspark>=3.5.6",
 ]
@@ -77,4 +77,4 @@ version_file = "src/nhp/_version.py"
 exclude = ["notebooks"]
 
 [tool.uv.sources]
-nhp-model = { git = "https://github.com/the-strategy-unit/nhp_model.git", rev = "v4.3.1" }
+nhp-model = { git = "https://github.com/the-strategy-unit/nhp_model.git", rev = "v4.4.0" }
