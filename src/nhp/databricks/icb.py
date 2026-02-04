@@ -8,9 +8,8 @@ from typing import Any, Callable
 
 import pandas as pd
 import pyspark.sql.functions as F
-from pyspark.sql import SparkSession
-
 from nhp.model.data import Data
+from pyspark.sql import SparkSession
 
 
 class DatabricksICB(Data):
@@ -86,7 +85,9 @@ class DatabricksICB(Data):
         )
 
         op_df = op_df.groupby(
-            list(set(op_df.columns) - {"attendances", "tele_attendances"}), as_index=False
+            list(set(op_df.columns) - {"attendances", "tele_attendances"}),
+            as_index=False,
+            dropna=False,
         )[["attendances", "tele_attendances"]].sum()
 
         op_df["rn"] = op_df.index
@@ -109,9 +110,9 @@ class DatabricksICB(Data):
             .toPandas()
         )
 
-        aae_df = aae_df.groupby(list(set(aae_df.columns) - {"arrivals"}), as_index=False)[
-            ["arrivals"]
-        ].sum()
+        aae_df = aae_df.groupby(
+            list(set(aae_df.columns) - {"arrivals"}), as_index=False, dropna=False
+        )[["arrivals"]].sum()
 
         aae_df["rn"] = aae_df.index
 
