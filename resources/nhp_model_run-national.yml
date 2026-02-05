@@ -1,7 +1,7 @@
 resources:
   jobs:
     NHP_Model-v4_3-Run_National:
-      name: NHP Model v4.4.0 Run (National)
+      name: NHP Model v4.4.1 Run (National)
       tasks:
         - task_key: list_files
           notebook_task:
