@@ -27,3 +27,10 @@ It reads some of the reference tables directly from Databricks.
 
 This implementation is still a work in progress.
 We're keeping notes for internal use only in the [nhp_products Wiki](https://github.com/The-Strategy-Unit/nhp_products/wiki/How-to-run-the-ICB-and-national-level-models).
+
+
+## Debugging and development
+
+Most users of the model should use the Databricks workflow as outlined in the Wiki to run the models. However, there are occasions where you may wish to run the notebooks directly on your own cluster.
+
+There are some commented out cells and sections of code in the notebooks to enable you to do this. You will also need to run the `generate_token.ps1` script in the root of the folder to generate and store the SAS token for updating Azure Table Storage. This is only required if you are running the notebook directly.
