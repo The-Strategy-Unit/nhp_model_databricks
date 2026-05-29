@@ -55,9 +55,9 @@ Write-Host "Uploading Table SAS token to Databricks Secrets..."
 
 $TableToken | databricks secrets put-secret `
     $SecretScope `
-    table_key
+    table_sas
 
-Write-Host "✅ Table SAS stored in Databricks secret scope '$SecretScope' as table_key."
+Write-Host "✅ Table SAS stored in Databricks secret scope '$SecretScope' as table_sas."
 
 $StorageAccountName | databricks secrets put-secret `
     $SecretScope `
