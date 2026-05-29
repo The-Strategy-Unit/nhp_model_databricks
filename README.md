@@ -27,3 +27,8 @@ It reads some of the reference tables directly from Databricks.
 
 This implementation is still a work in progress.
 We're keeping notes for internal use only in the [nhp_products Wiki](https://github.com/The-Strategy-Unit/nhp_products/wiki/How-to-run-the-ICB-and-national-level-models).
+
+
+## Debugging and development
+
+Most users of the model should use the Databricks workflow as outlined in the Wiki to run the models. However, there are occasions where you may wish to run the notebooks directly on your own cluster. See the commented out cell at the top of the National notebook for details on how to do this.
