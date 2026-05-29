@@ -1,7 +1,7 @@
 resources:
   jobs:
     NHP_Model-Run_Provider:
-      name: NHP Model v5.0.0 Run (Provider)
+      name: NHP Model v5.1.0 Run (Provider)
       tasks:
         - task_key: list_files
           notebook_task:

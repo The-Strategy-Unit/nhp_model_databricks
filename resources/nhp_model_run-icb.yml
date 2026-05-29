@@ -1,7 +1,7 @@
 resources:
   jobs:
     NHP_Model-Run_ICB:
-      name: NHP Model v5.0.0 Run (ICB)
+      name: NHP Model v5.1.0 Run (ICB)
       tasks:
         - task_key: list_files
           notebook_task:
