@@ -789,8 +789,8 @@ wheels = [
 
 [[package]]
 name = "nhp-model"
-version = "5.2.0"
-source = { git = "https://github.com/the-strategy-unit/nhp_model.git?rev=v5.2.0#349ca71346309a450e0add81f8f375823afd6662" }
+version = "6.0.0"
+source = { git = "https://github.com/the-strategy-unit/nhp_model.git?rev=v6.0.0#318891f57452cb963f3c215e993aae77de795b0b" }
 dependencies = [
     { name = "azure-data-tables" },
     { name = "azure-identity" },
@@ -820,7 +820,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "databricks-connect", specifier = ">=16.1.6" },
-    { name = "nhp-model", git = "https://github.com/the-strategy-unit/nhp_model.git?rev=v5.2.0" },
+    { name = "nhp-model", git = "https://github.com/the-strategy-unit/nhp_model.git?rev=v6.0.0" },
     { name = "pandas", specifier = ">=2.3.2" },
     { name = "pyspark", specifier = ">=3.5.6" },
 ]
