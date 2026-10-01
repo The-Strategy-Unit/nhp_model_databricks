@@ -23,21 +23,13 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://adb-4243551358552236.16.azuredatabricks.net
-
-    presets:
-      # Set dynamic_version: true on all artifacts of type "whl".
-      # This makes "bundle deploy" add a timestamp to wheel's version before uploading,
-      # new wheel takes over the previous installation even if actual wheel version is unchanged.
-      # See https://docs.databricks.com/aws/en/dev-tools/bundles/settings
-      artifacts_dynamic_version: true
+      host: https://adb-6450443583208388.8.azuredatabricks.net
 
   prod:
     mode: production
     workspace:
-      host: https://adb-4243551358552236.16.azuredatabricks.net
-      # We explicitly deploy to /Workspace/Users/thomas.jemmett@mlcsu.nhs.uk to make sure we only have a single copy.
-      root_path: /Workspace/Jobs/nhp_devs/${bundle.name}/${bundle.target}
+      host: https://adb-6450443583208388.8.azuredatabricks.net
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
     permissions:
-      - user_name: thomas.jemmett@mlcsu.nhs.uk
+      - group_name: UDAL - Databricks - NewHospitalProgramme - PROD
         level: CAN_MANAGE
