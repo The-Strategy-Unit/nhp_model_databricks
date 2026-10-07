@@ -227,7 +227,9 @@ class DatabricksNational(Data):
         :rtype: pd.DataFrame
         """
         return (
-            self._spark.read.table("nhp.default.hsa_activity_tables_national")
+            self._spark.read.table(
+                "udal_lake_mart.newhospitalprogramme.default_hsa_activity_tables_national"
+            )
             .filter(F.col("fyear") == self._year * 100 + (self._year + 1) % 100)
             .groupBy("hsagrp", "sex", "age")
             .agg(F.mean("activity").alias("activity"))

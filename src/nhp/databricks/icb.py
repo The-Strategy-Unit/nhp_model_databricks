@@ -163,12 +163,12 @@ class DatabricksICB(Data):
         # which year of the ONS population projections to use
         projection_year = 2022
         # load the tables
-        births_df = self._spark.read.table("nhp.population_projections.births").filter(
-            F.col("projection_year") == projection_year
-        )
-        catchments_df = self._spark.read.table("nhp.reference.icb_catchments").filter(
-            F.col("icb") == self._icb
-        )
+        births_df = self._spark.read.table(
+            "udal_lake_mart.newhospitalprogramme.population_projections_births"
+        ).filter(F.col("projection_year") == projection_year)
+        catchments_df = self._spark.read.table(
+            "udal_lake_mart.newhospitalprogramme.reference_icb_catchments"
+        ).filter(F.col("icb") == self._icb)
         # join and aggregate
         return (
             births_df.join(catchments_df, "area_code")  # noqa: PD010
@@ -188,12 +188,12 @@ class DatabricksICB(Data):
         # which year of the ONS population projections to use
         projection_year = 2022
         # load the tables
-        demographics_df = self._spark.read.table("nhp.population_projections.demographics").filter(
-            F.col("projection_year") == projection_year
-        )
-        catchments_df = self._spark.read.table("nhp.reference.icb_catchments").filter(
-            F.col("icb") == self._icb
-        )
+        demographics_df = self._spark.read.table(
+            "udal_lake_mart.newhospitalprogramme.population_projections_demographics"
+        ).filter(F.col("projection_year") == projection_year)
+        catchments_df = self._spark.read.table(
+            "udal_lake_mart.newhospitalprogramme.reference_icb_catchments"
+        ).filter(F.col("icb") == self._icb)
         # join and aggregate
         return (
             demographics_df.join(catchments_df, "area_code")  # noqa: PD010
@@ -210,7 +210,9 @@ class DatabricksICB(Data):
         :rtype: pd.DataFrame
         """
         return (
-            self._spark.read.table("nhp.default.hsa_activity_tables_icb")
+            self._spark.read.table(
+                "udal_lake_mart.newhospitalprogramme.default_hsa_activity_tables_icb"
+            )
             .filter(F.col("icb") == self._icb)
             .filter(F.col("fyear") == self._year * 100 + (self._year + 1) % 100)
             .groupBy("hsagrp", "sex", "age")
