@@ -8,8 +8,9 @@ from typing import Any, Callable
 
 import pandas as pd
 import pyspark.sql.functions as F
-from nhp.model.data import Data
 from pyspark.sql import SparkSession
+
+from nhp.model.data import Data
 
 
 class DatabricksICB(Data):
@@ -67,6 +68,41 @@ class DatabricksICB(Data):
             .toPandas()
             for k in ["activity_avoidance", "efficiencies"]
         }
+
+    def get_ip_functional_areas_beds(self) -> pd.DataFrame:
+        """Get the inpatients functional areas beds dataframe.
+
+        :return: the inpatients functional areas beds dataframe
+        :rtype: pd.DataFrame
+        """
+        return (
+            self._spark.read.parquet(f"{self._data_path}/ip_functional_areas_beds")
+            .filter(F.col("fyear") == self._year)
+            .groupBy("rn", "functional_area")
+            .agg(
+                F.sum("group_los").alias("group_los"),
+                F.sum("episodes").alias("episodes"),
+                F.sum("los_total").alias("los_total"),
+                F.sum("group_pcnt").alias("group_pcnt"),
+            )
+            .withColumn("sitetret", F.lit("-"))
+            .toPandas()
+        )
+
+    def get_ip_functional_areas_procedures(self) -> pd.DataFrame:
+        """Get the inpatients functional areas procedures dataframe.
+
+        :return: the inpatients functional areas procedures dataframe
+        :rtype: pd.DataFrame
+        """
+        return (
+            self._spark.read.parquet(f"{self._data_path}/ip_functional_areas_procedures")
+            .filter(F.col("fyear") == self._year)
+            .groupBy("rn", "functional_area")
+            .agg(F.sum("count").alias("count"))
+            .withColumn("sitetret", F.lit("-"))
+            .toPandas()
+        )
 
     def get_op(self) -> pd.DataFrame:
         """Get the outpatients dataframe.

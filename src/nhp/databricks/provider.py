@@ -68,6 +68,34 @@ class DatabricksProvider(Data):
             for k in ["activity_avoidance", "efficiencies"]
         }
 
+    def get_ip_functional_areas_beds(self) -> pd.DataFrame:
+        """Get the inpatients functional areas beds dataframe.
+
+        :return: the inpatients functional areas beds dataframe
+        :rtype: pd.DataFrame
+        """
+        return (
+            self._spark.read.parquet(f"{self._data_path}/ip_functional_areas_beds")
+            .filter(F.col("dataset") == self._dataset)
+            .filter(F.col("fyear") == self._year)
+            .drop("dataset", "fyear")
+            .toPandas()
+        )
+
+    def get_ip_functional_areas_procedures(self) -> pd.DataFrame:
+        """Get the inpatients functional areas procedures dataframe.
+
+        :return: the inpatients functional areas procedures dataframe
+        :rtype: pd.DataFrame
+        """
+        return (
+            self._spark.read.parquet(f"{self._data_path}/ip_functional_areas_procedures")
+            .filter(F.col("dataset") == self._dataset)
+            .filter(F.col("fyear") == self._year)
+            .drop("dataset", "fyear")
+            .toPandas()
+        )
+
     def get_op(self) -> pd.DataFrame:
         """Get the outpatients dataframe.
 
