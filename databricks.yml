@@ -9,7 +9,7 @@ include:
   - resources/*/*.yml
 
 artifacts:
-  nhp_data:
+  nhp_model_databricks:
     type: whl
     build: uv build
     path: .

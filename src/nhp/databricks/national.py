@@ -233,6 +233,7 @@ class DatabricksNational(Data):
             .filter(F.col("fyear") == self._year * 100 + (self._year + 1) % 100)
             .groupBy("hsagrp", "sex", "age")
             .agg(F.mean("activity").alias("activity"))
+            .orderBy("hsagrp", "sex", "age")
             .toPandas()
         )
 

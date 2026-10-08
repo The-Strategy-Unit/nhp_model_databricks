@@ -51,6 +51,6 @@ resources:
         - name: queue_path
           default: "/Volumes/udal_lake_mart/newhospitalprogramme/files/queue/icb/"
         - name: data_path
-          default: "/Volumes/udal_lake_mart/newhospitalprogramme/files/model_data/files/v6.0.0/"
+          default: "/Volumes/udal_lake_mart/newhospitalprogramme/files/model_data/v6.0.0/"
         - name: save_full_model_results
           default: "false"
