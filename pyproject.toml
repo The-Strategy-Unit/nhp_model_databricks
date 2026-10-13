@@ -9,7 +9,11 @@ dependencies = [
     "ipywidgets>=8.1.9",
     "jupyter>=1.1.1",
     "nhp-model==6.0.0",
+    "rich>=13.7.1",
 ]
+
+[project.scripts]
+nhp_databricks_tui = "nhp.databricks.tui:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
