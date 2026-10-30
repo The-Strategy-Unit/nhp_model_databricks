@@ -3,6 +3,8 @@
 Databricks runner and terminal UI for executing `nhp-model` scenarios against
 Databricks-backed datasets.
 
+You will need [`uv`](https://docs.astral.sh/uv/) installed.
+
 ## What this repo provides
 
 - A reusable run wrapper (`Run`) that executes model runs and stores metadata.
@@ -16,6 +18,32 @@ Databricks-backed datasets.
 - `uv` (recommended for environment and dependency management)
 - Access to a Databricks cluster
 - Access to model data storage
+
+## Set up Databricks authentication
+
+Open up a browser tab and log into the Databricks website.
+Copy the databricks domain name to your clipboard (remove anything in the URL
+after the domain suffix (.com/.net)).
+
+Run
+
+```powershell
+databricks auth login
+```
+
+Select option 2 ("enter a host URL manually"), and then paste the domain name.
+
+## Optional: pin to a specific Python version
+
+`uv` will install the version if not already available.
+
+For example:
+
+```powershell
+uv python pin 3.14
+```
+
+This will create (or update) a `.python-version` file in the repository root.
 
 ## Install
 
@@ -35,6 +63,8 @@ Create a `.env` file in the repository root (or export env vars in your shell):
 DATA_PATH=<base data path used by the model>
 DATABRICKS_CLUSTER_ID=<cluster id>
 ```
+
+A `.env.sample` file is provided in the repository for your convenience.
 
 ### Notes
 
@@ -56,8 +86,19 @@ uv run nhp_databricks_tui
 You can also run the module directly:
 
 ```powershell
-uv run python -m nhp.databricks.tui
+uv run -m nhp.databricks.tui
 ```
+
+It may take a few seconds for the TUI to appear at the terminal.
+
+If these run commands do not work, you can try running
+
+```powershell
+uv pip install -e .
+```
+
+as an alternative to `uv sync`, which may unblock things.
+But the pip approach is not optimal.
 
 ## TUI flow
 
