@@ -8,7 +8,7 @@ dependencies = [
     "databricks-connect==17.3.*",
     "ipywidgets>=8.1.9",
     "jupyter>=1.1.1",
-    "nhp-model==6.0.0",
+    "nhp-model==6.1.0",
     "rich>=13.7.1",
 ]
 
