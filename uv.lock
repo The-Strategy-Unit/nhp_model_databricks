@@ -1817,7 +1817,6 @@ wheels = [
 
 [[package]]
 name = "nhp-databricks"
-version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "databricks-connect" },
