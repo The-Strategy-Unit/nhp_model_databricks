@@ -1,19 +1,20 @@
 [project]
 name = "nhp.databricks"
-version = "0.1.0"
-description = "Add your description here"
+dynamic = ["version"]
+description = "A Databricks implementation of the New Hospital Programme (NHP) demand model"
 readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.12"
 dependencies = [
     "databricks-connect==17.3.*",
     "ipywidgets>=8.1.9",
     "jupyter>=1.1.1",
-    "nhp-model==6.0.0",
+    "nhp-model==6.1.0",
     "rich>=13.7.1",
 ]
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=68", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project.scripts]
@@ -21,6 +22,10 @@ nhp_databricks_tui = "nhp.databricks.tui:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
+
+[tool.setuptools_scm]
+write_to = "src/nhp/databricks/_version.py"
+fallback_version = "0.0.0"
 
 [tool.setuptools.packages.find]
 where = ["src"]

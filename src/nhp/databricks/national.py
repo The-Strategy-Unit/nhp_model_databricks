@@ -24,7 +24,7 @@ class DatabricksNational(DatabricksData):
         data_path: str,
         year: int,
         dataset: str = "national",
-        sample_rate: float = 0.001,
+        sample_rate: float = 0.01,
         seed: int | None = None,
     ):
         """Initialise DatabricksNational data loader class."""
